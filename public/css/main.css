@@ -1,0 +1,693 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Robot Serif', sans-serif;
+    font-family: 'Roboto Serif', sans-serif;
+    font-size: 14px;
+    background-color: black;
+}
+
+body > img{
+    width: 100%;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+header > img{
+    width: 10%;
+}
+
+.Boahh{
+    border-radius: 50%;
+}
+
+li, a, button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 3px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #000000;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.nav_link {
+    list-style: none;
+}
+
+.nav_link li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_link li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav_link li a:hover{
+    color: #a0000d;
+}
+
+.nav_link i{
+    color: white;
+}
+
+#cart-icoon{
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+#cart-icoon:hover{
+   color: #50030a;
+   transition: all 0.5s;
+}
+
+.winkel-inhoud{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    gap: 1.5rem;
+}
+
+.ster{
+    color: gold;
+}
+
+.shop{
+    padding-bottom: 30px;
+}
+
+
+.product-doos{
+    position: relative;
+}
+
+.product-doos:hover{
+    padding: 10px;
+    border: 1px solid;
+    transition: 0.4s;
+}
+
+.product-img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.product-naam{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.prijs{
+    font-weight: 500;
+}
+
+.toevoegen{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #86040f;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.toevoegen:hover{
+    color: #ffffffaa;
+    transition: 0.5s;
+}
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    min-height: 100vh;
+    padding: 20px;
+    background: #EEEEEE;
+    transition: 0.5s;
+}
+
+.cart.Active {
+    right: 0;
+}
+
+.cart-titel{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.section-titel{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 100px;
+}
+
+.cart-doos{
+    display: grid;
+    grid-template-columns: 22% 50% 18%;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.cart-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.videos > a{
+    color: #000000;
+    font-size: 14px;
+    padding-left: 10px;
+    border-style: inset;
+    padding-right: 10px;
+    border-color: #86040f;
+}
+
+.details{
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-titel{
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-prijs{
+    font-weight: 500;
+}
+
+.item-verwijderen{
+    font-size: 24px;
+    cursor: pointer;
+    color:#86040f;  
+}
+
+.totaal{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+    font-family: 'Montersat';
+
+}
+
+.totaal-titel{
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Montersat';
+}
+
+.totaal-prijs {
+    margin-left: 0.5rem;
+}
+
+.aantal {
+    border: 1px solid black;
+    outline-color: #000000;
+    width: 60px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.button-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: #86040f;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button-buy:hover {
+    background: #50030a;
+    border-radius: 50px;
+}
+
+#cart-sluiten {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    cursor: pointer;
+    color: #86040f;
+    font-size: 2rem;
+}
+
+button {
+    padding: 9px 25px;
+    background-color: #86040f;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+a.Active,button:hover{
+    background-color: #64040c;
+    border-radius: 5px;
+}
+
+.informatie{
+    background-color: #EEEEEE;
+}
+
+.informatie p{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.informatie2{
+    background-color: #EEEEEE;
+}
+
+.informatie2 h1, i, p{
+    color: black;
+    font-family: 'Montserrat';
+}
+
+.informatie2 > h2{
+    position: relative;
+    border: 1px solid black;
+    align-items: center;
+    width: 300px;
+    height: 100px;
+}
+
+.informatie2 > i{
+    color: white;
+}
+
+.informatie i{
+    color: #000000;
+}
+
+.contact{
+    background-color: #EEEEEE;
+    text-align: center;
+}
+
+.bronnenlijst p{
+    color: #000000;
+    padding-left: 10px;
+}
+
+summary{
+    padding-bottom: 10px;
+}
+
+.bronnenlijst {
+    background-color: #EEEEEE;
+}
+
+.bronnenlijst h2{
+    padding-top: 40px;
+    padding-left: 10px;
+    font-family: 'Montserrat';
+}
+
+.webshop{
+    background-color: #EEEEEE;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 40px;
+    padding: 80px;
+
+}
+
+article h2{
+    margin-top: 20px;
+    padding: 40px;
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+
+p{
+    line-height: 1.55;
+    margin-top: 7.5px;
+    color: white;
+}
+
+.gameInformatie{
+    font-size: 18px;
+    transform: translateX(50%);
+    width: 50%;
+    text-align: center;
+    font-family: Serif;
+    color: #000000;
+    font-family: 'Montserrat';
+}
+
+.header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: black;
+    background:  no-repeat center center fixed;
+}
+
+h1{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Montserrat';
+    color: black;
+    border-color: black;
+    padding: 20px;
+    margin: 15px;
+}
+
+.header h1{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Roboto+Serif';
+    color: white;
+    border-color: black;
+    padding: 20px;
+    margin: 15px;
+    z-index: 1;
+}
+
+video{
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    margin-top: -112px;
+    flex-wrap: wrap;
+}
+
+.index > i{
+    color: white;
+}
+
+.inleiding{
+    font-size: 18px;
+    transform: translateX(50%);
+    width: 50%;
+    text-align: center;
+    font-family: Serif;
+}
+
+.mainCards{
+    background-color: black ;
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 40px;
+    padding: 80px;
+}
+
+.map img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.map img:hover{
+    transform: scale(1.4);
+    transition: 0.6s;
+}
+
+.gang img:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+
+.gang img{
+    width: 60%;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+body > article > section > li{
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+i{
+    margin-left: 40px;
+}
+
+.map i{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+details{
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.Card {
+    flex-shrink: 1;
+    width: 100%;
+    height: 40rem;
+    background-color: #EEEEEE;
+    filter: drop-shadow(5px 5px 5px rgb(75, 6, 6));
+    transition: all 0.5s;
+}
+
+select{
+    margin-bottom: 20px;
+}
+
+.add-cart{
+    cursor: pointer;
+    background-color: #86040f;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.cardTekst a:hover{
+    background-color: #50030a;
+    transition: .5s;
+}
+
+.cardTekst{
+    padding: 20px;
+}
+
+.cardTekst > h3{
+    color: black;
+}
+
+.cardTekst > p{
+    color:black;
+    padding-bottom: 10px;
+}
+
+.cardTekst > i{
+    color: black;
+    display: inline-block;
+}
+
+.Card .cardTekst {
+    padding: 2rem;
+    height: 40%;
+    display: grid;
+    flex-direction: column;
+}
+
+.Card:hover {
+    filter: drop-shadow(10px 10px 10px rgb(75, 6, 6));
+    transform: scale(1.2);
+}
+
+.Card figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer h2{
+    font-size: 50px;
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+.footer p{
+    color: white;
+    text-align: center;
+}
+
+footer{
+    background: black;
+    height: 132px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    border-color: orange;  
+    border-width: 5px;  
+    border-style: inset;
+}
+
+footer > img{
+    width: 10%;
+}
+
+.rating{
+    width: 5%;
+}
+
+footer > h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+}
+
+footer > p{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+body::-webkit-scrollbar{
+    width: 12px;
+    background-color: black;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #86040f;
+}
+
+input[type=submit]{
+    width: 40%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+form > h2{
+    color: black;
+}
+
+form p{
+    padding: 0;
+    margin-bottom: 0;
+    color: black;
+}
+
+input[type=text]{
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit]{
+    background-color:#86040f;
+    color: white;
+    padding: 20px;
+    border: 1px solid #86040f;
+}
+
+input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #74040d;
+}
+
+@media only screen and (max-width: 950px) {
+    nav ul li{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1000px){ 
+    .mainCards{
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+    }
+} 
+
+@media only screen and (max-width: 770px){ 
+    .mainCards{
+        grid-template-columns: 1fr ;
+        width: 80%;
+    }
+    .cardsImg{
+        width: 60%;
+    }
+} 
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
